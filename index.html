@@ -485,16 +485,8 @@
 
         <section id="contact">
             <div class="container">
-                <h2>📬 Contact Me</h2>
+                <h2>📬 Contact Me (I am open to work)</h2>
                 <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
                         <input type="text" id="subject" name="subject" required>
@@ -525,10 +517,9 @@
 
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            window.location.href = `mailto:edrineviper@yahoo.com?subject=Portfolio Contact&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
+            window.location.href = `mailto:edrineviper@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
         });
 
         document.querySelectorAll('.view-details-btn').forEach(btn => {
