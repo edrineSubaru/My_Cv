@@ -81,6 +81,18 @@ header h2 {
     line-height: 1.4;
 }
 
+.education p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.contact-education {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
 .contact a {
     color: var(--accent-color);
     text-decoration: none;
@@ -224,6 +236,30 @@ main {
 .project-card p {
     margin: 0 15px 15px;
     font-size: 0.9rem;
+    max-height: 150px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.project-card p.expanded {
+    max-height: none;
+}
+
+.view-details-btn {
+    display: block;
+    margin: 0 15px 15px;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3;
 }
 
 .project-card ul {
@@ -302,5 +338,8 @@ footer {
     }
     .profile-pic {
         margin-bottom: 20px;
+    }
+    .contact-education {
+        flex-direction: column;
     }
 }
