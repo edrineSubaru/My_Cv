@@ -49,45 +49,102 @@
                         <p>📞 +971-545759653</p>
                         <p>🔗 <a href="https://edrinesubaru.github.io/My_Cv/" target="_blank">GitHub</a> | <a
                                 href="https://edrinesubaru.github.io/My_Cv/" target="_blank">LinkedIn</a></p>
+                        <div class="header-buttons">
+                            <div class="theme-toggle">
+                                <input type="checkbox" id="theme-switch">
+                                <label for="theme-switch">Toggle Theme</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="education">
                         <p>🎓 BSC Information Technology</p>
                         <p>📜 Diploma in Computer Science</p>
                         <p>📋 Certificate in Computer Science</p>
                         <p>🔌 CCNA</p>
+                        <div class="header-buttons">
+                            <a href="cv.pdf" download class="btn header-btn">Download CV</a>
+                            <!-- <div class="theme-toggle">
+                                <input type="checkbox" id="theme-switch">
+                                <label for="theme-switch">Toggle Theme</label>
+                            </div> -->
+                        </div>
                     </div>
-                </div>
-                <div class="theme-toggle">
-                    <input type="checkbox" id="theme-switch">
-                    <label for="theme-switch">Toggle Theme</label>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section id="bio">
+        <section id="bio-roles">
             <div class="container">
-                <h2>Professional Summary</h2>
-                <p>Full Stack Web Developer and AI Integration Engineer with 3+ years of hands-on experience building
-                    secure, scalable, and enterprise-grade applications using .NET Core, Angular, and SQL Server.
-                    Skilled in Clean Architecture, CQRS, JWT authentication, and microservices. Proven ability to design
-                    and deploy CI/CD pipelines using GitHub Actions and Docker containers for automated testing, builds,
-                    and cloud-native deployment.</p>
-                <p>Currently transitioning into AI-native engineering, leveraging tools like OpenAI, LangChain, and
-                    FastAPI to accelerate development, automate infrastructure, and build intelligent applications.
-                    Experienced in prompting AI to scaffold full-stack solutions, validate architecture, and optimize
-                    code quality—reducing delivery time from days to minutes.</p>
-                <p>Comfortable translating business logic into reusable APIs, integrating AI agents into existing
-                    systems, and deploying containerized applications with real-time monitoring. Passionate about
-                    future-proof engineering, cross-stack fluency, and delivering solutions that blend performance with
-                    innovation.</p>
-                <a href="cv.pdf" download class="btn">Download CV</a>
+                <div class="bio-roles-wrapper">
+                    <div class="bio">
+                        <h2>🧠 Professional Summary</h2>
+                        <p>Full Stack Web Developer and AI Integration Engineer with 3+ years of hands-on experience
+                            building
+                            secure, scalable, and enterprise-grade applications using .NET Core, Angular, and SQL
+                            Server.
+                            Skilled in Clean Architecture, CQRS, JWT authentication, and microservices. Proven ability
+                            to design
+                            and deploy CI/CD pipelines using GitHub Actions and Docker containers for automated testing,
+                            builds,
+                            and cloud-native deployment.</p>
+                        <div class="bio-expanded">
+                            <p>Currently transitioning into AI-native engineering, leveraging tools like OpenAI,
+                                LangChain, and
+                                FastAPI to accelerate development, automate infrastructure, and build intelligent
+                                applications.
+                                Experienced in prompting AI to scaffold full-stack solutions, validate architecture, and
+                                optimize
+                                code quality—reducing delivery time from days to minutes.</p>
+                            <p>Comfortable translating business logic into reusable APIs, integrating AI agents into
+                                existing
+                                systems, and deploying containerized applications with real-time monitoring. Passionate
+                                about
+                                future-proof engineering, cross-stack fluency, and delivering solutions that blend
+                                performance with
+                                innovation.</p>
+                        </div>
+                    </div>
+                    <div class="roles">
+                        <h2>🧩 Roles & Responsibilities</h2>
+                        <p>As a Full Stack Developer and AI Integration Engineer, I've contributed to the design,
+                            development, and ongoing evolution of enterprise-grade applications across government,
+                            financial, and internal systems. My responsibilities include:</p>
+                        <ul class="roles-list">
+                            <li>Full-Stack Development: Building and maintaining Angular frontends and .NET Core
+                                backends across multiple platforms, including HRMS, WPS systems, and public service
+                                portals.</li>
+                            <li>Architecture & Design: Applying Clean Architecture, CQRS, and modular design principles
+                                to ensure scalable, maintainable codebases.</li>
+                            <li>AI Integration: Designing AI-powered tools and workflows using OpenAI, LangChain, and
+                                prompt engineering to enhance developer productivity and automate decision-making.</li>
+                            <li>DevOps & CI/CD: Creating and maintaining CI/CD pipelines using GitHub Actions and
+                                Docker. Managing secrets, build/test workflows, and container orchestration for
+                                production-ready deployments.</li>
+                            <li>Third-Party Integrations: Implementing secure and compliant integrations with UAE Pass,
+                                MOHRE, MoneyGram, Western Union, Passdock, and other external services.</li>
+                            <li>System Maintenance & Feature Delivery: Providing long-term support for live systems,
+                                including bug fixing, performance optimization, and incremental feature development
+                                based on evolving business needs.</li>
+                            <li>Data & Reporting: Optimizing SQL queries, building dynamic dashboards, and implementing
+                                analytics for operational insights across ERP and service platforms.</li>
+                            <li>Security & Access Control: Implementing RBAC, JWT authentication, and secure API
+                                communication across sensitive government and financial systems.</li>
+                            <li>Collaboration & Ownership: Working closely with cross-functional teams to interpret
+                                BRDs, deliver high-impact features, and ensure seamless user experiences.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bio-roles-buttons">
+                    <button class="view-more-bio-btn">View More</button>
+                    <button class="view-more-btn">View More</button>
+                </div>
             </div>
         </section>
 
         <section id="skills">
             <div class="container">
-                <h2>Technical Skills</h2>
+                <h2>🛠️ Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h3>Languages</h3>
@@ -111,15 +168,15 @@
                     </div>
                     <div class="skill-category">
                         <h3>Architecture</h3>
-                        <p>Clean Architecture, CQRS, JWT, DI, Microservices</p>
+                        <p>Clean Architecture, CQRS, JWT, DI, Microservices, Role-based Access Control (RBAC)</p>
                     </div>
                     <div class="skill-category">
                         <h3>Database</h3>
-                        <p>SQL Server, MongoDB, MySQL, Vector DBs (Pinecone, Weaviate)</p>
+                        <p>SQL Server, MongoDB, MySQL</p>
                     </div>
                     <div class="skill-category">
                         <h3>Tools</h3>
-                        <p>Git, GitHub, Postman, Swagger, VS Code, Visual Studio, TFS</p>
+                        <p>Git, GitHub, Postman, Swagger, VS Code, Visual Studio, TFS, UAE Pass Integration</p>
                     </div>
                     <div class="skill-category">
                         <h3>Additional</h3>
@@ -131,7 +188,7 @@
 
         <section id="projects">
             <div class="container">
-                <h2>Highlighted Projects</h2>
+                <h2>📂 Highlighted Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <img loading="lazy" src="Images/autograph/autog.png" alt="Autograph Salary/WPS System">
@@ -160,7 +217,7 @@
 
                     <div class="project-card">
                         <img loading="lazy" src="Images/ajman/ajman 1.jpeg" alt="Ajman E-Services Portal">
-                        <h3>Ajman E-Services Portal<br/>(Ajman Government)</h3>
+                        <h3>Ajman E-Services Portal<br />(Ajman Government)</h3>
                         <p>
                             A public-facing digital services platform enabling streamlined access to government
                             workflows for citizens and businesses in Ajman.<br>
@@ -183,7 +240,7 @@
                     </div>
                     <div class="project-card">
                         <img loading="lazy" src="Images/rta/rta 1.jpeg" alt="RTA Services Portal">
-                        <h3>RTA Services Portal <br/> (Dubai Government)</h3>
+                        <h3>RTA Services Portal <br /> (Dubai Government)</h3>
                         <p>
                             High-traffic government portal for fine inquiry, license renewal, and vehicle registration
                             workflows.<br>
@@ -207,7 +264,7 @@
                     </div>
                     <div class="project-card">
                         <img loading="lazy" src="Images/hrms/hrms 1.jpeg" alt="Multi-Level HRMS">
-                        <h3>Multi-Level HRMS <br/>(Multi Level Technology)</h3>
+                        <h3>Multi-Level HRMS <br />(Multi Level Technology)</h3>
                         <p>
                             Comprehensive HR and company management system built with ASP.NET MVC (Razor Pages), SQL
                             Server, and vanilla JavaScript.<br>
@@ -228,9 +285,8 @@
                         </ul>
                     </div>
                     <div class="project-card">
-                        <img loading="lazy" src="Images/khalifah/khalifah.png"
-                            alt="Khalifah Fund QR Pass System">
-                        <h3>Khalifah Fund QR Pass System <br/>(Abu Dhabi Government)</h3>
+                        <img loading="lazy" src="Images/khalifah/khalifah.png" alt="Khalifah Fund QR Pass System">
+                        <h3>Khalifah Fund QR Pass System <br />(Abu Dhabi Government)</h3>
                         <p>
                             Secure access management dashboard for government premises, enabling QR-based visitor and
                             employee pass issuance.<br>
@@ -327,7 +383,7 @@
 
                     <div class="project-card">
                         <img loading="lazy" src="Images/book_erp/book_erp.png" alt="Book ERP System">
-                        <h3>Book ERP System <br/>(Multi Level Technology)</h3>
+                        <h3>Book ERP System <br />(Multi Level Technology)</h3>
                         <p>
                             Enterprise ticketing and asset management platform used by service desk personnel for call
                             center operations.<br>
@@ -346,8 +402,7 @@
                         </ul>
                     </div>
                     <div class="project-card">
-                        <img loading="lazy" src="Images/coffee/coffeem.png"
-                            alt="Coffee Machine Dashboard">
+                        <img loading="lazy" src="Images/coffee/coffeem.png" alt="Coffee Machine Dashboard">
                         <h3>Coffee Machine Dashboard (Multi Level Technology)</h3>
                         <p>
                             Operational dashboard for tracking coffee machine activity, consumption, and service metrics
@@ -368,8 +423,7 @@
                         </ul>
                     </div>
                     <div class="project-card">
-                        <img loading="lazy" src="Images/coming-soon/coming.jpg"
-                            alt="AI-Powered App Scaffolder">
+                        <img loading="lazy" src="Images/coming-soon/coming.jpg" alt="AI-Powered App Scaffolder">
                         <h3>AI-Powered App Scaffolder (Personal Project)</h3>
                         <p>
                             AI-native productivity tool (in development) that transforms BRDs or pseudocode documents
@@ -395,7 +449,7 @@
 
         <section id="contact">
             <div class="container">
-                <h2>Contact Me</h2>
+                <h2>📬 Contact Me</h2>
                 <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -441,9 +495,27 @@
             btn.addEventListener('click', () => {
                 const p = btn.previousElementSibling;
                 p.classList.toggle('expanded');
-                btn.textContent = p.classList.contains('expanded') ? 'View Less' : 'View Details';
+                btn.textContent = p.classList.contains('expanded') ? 'Hide Details' : 'View Details';
             });
         });
+
+        const viewMoreBtn = document.querySelector('.view-more-btn');
+        if (viewMoreBtn) {
+            viewMoreBtn.addEventListener('click', () => {
+                const ul = document.querySelector('.roles-list');
+                ul.classList.toggle('expanded');
+                viewMoreBtn.textContent = ul.classList.contains('expanded') ? 'View Less' : 'View More';
+            });
+        }
+
+        const viewMoreBioBtn = document.querySelector('.view-more-bio-btn');
+        if (viewMoreBioBtn) {
+            viewMoreBioBtn.addEventListener('click', () => {
+                const div = document.querySelector('.bio-expanded');
+                div.classList.toggle('expanded');
+                viewMoreBioBtn.textContent = div.classList.contains('expanded') ? 'View Less' : 'View More';
+            });
+        }
     </script>
 </body>
 
