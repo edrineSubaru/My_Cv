@@ -140,6 +140,44 @@
             </div>
         </section>
 
+        <section id="experience-architecture">
+            <div class="container">
+                <div class="experience-architecture-wrapper">
+                    <div class="experience">
+                        <h2>💼 Work Experience</h2>
+                        <div class="experience-item">
+                            <h3>Software Engineer</h3>
+                            <p><strong>Multi Level Technology, Abu Dhabi</strong></p>
+                            <p><em>March 2020 – Present</em></p>
+                            <button class="view-more-experience-btn">View More</button>
+                            <ul class="experience-list">
+                                <li>Initially joined as an IT Support Specialist, stationed at RTA premises in Dubai, providing technical assistance for smart teller machines and public service kiosks.</li>
+                                <li>Transitioned into software development after three years, currently working on full-stack enterprise systems and AI-powered applications.</li>
+                                <li>Contributed to government portals, financial platforms, and internal dashboards using Angular, .NET Core, SQL Server, and Clean Architecture.</li>
+                                <li>Led development and maintenance of key modules across HRMS, WPS systems, and access control platforms, integrating third-party services like UAE Pass, MOHRE, MoneyGram, and Passdock.</li>
+                                <li>Designed CI/CD pipelines using GitHub Actions and Docker, implemented secure authentication flows, and optimized backend APIs for performance and scalability.</li>
+                                <li>Actively maintain and evolve live systems, delivering new features, resolving bugs, and aligning technical solutions with business requirements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="architecture">
+                        <h2>🧱 Portfolio Architecture (for Dev Audiences)</h2>
+                        <p>This portfolio is more than a showcase — it's a reflection of my transition from manual coding to AI-assisted engineering. I now leverage prompt engineering and AI orchestration to scaffold full-stack systems with speed, precision, and architectural consistency.</p>
+                        <button class="view-more-architecture-btn">View More</button>
+                        <ul class="architecture-list">
+                            <li><strong>Frontend:</strong> Built with HTML, CSS, and vanilla JavaScript for lightweight rendering. Angular and React are used in demo projects to showcase dynamic UI capabilities.</li>
+                            <li><strong>Backend:</strong> Projects span .NET Core APIs, Node.js microservices, and FastAPI endpoints — many scaffolded using AI tools based on BRDs or pseudocode inputs.</li>
+                            <li><strong>AI Integration:</strong> I use OpenAI and LangChain to interpret business logic, generate modular codebases, and automate repetitive development tasks.</li>
+                            <li><strong>CI/CD Pipeline:</strong> Configured GitHub Actions with YAML workflows for build, test, Docker image creation, and registry push. Secrets are managed securely via GitHub Secrets.</li>
+                            <li><strong>Containerization:</strong> Dockerized applications for consistent deployment across environments. Compose files manage multi-service orchestration.</li>
+                            <li><strong>Database:</strong> SQL Server and MongoDB are used across projects, with vector DBs (Pinecone, Weaviate) integrated for AI-powered search and matching.</li>
+                            <li><strong>Deployment Strategy:</strong> Projects are staged for deployment via Docker registries and cloud environments. Future iterations will include auto-deploy pipelines and serverless endpoints.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="skills">
             <div class="container">
                 <h2>🛠️ Technical Skills</h2>
@@ -512,6 +550,24 @@
                 const div = viewMoreBioBtn.nextElementSibling;
                 div.classList.toggle('expanded');
                 viewMoreBioBtn.textContent = div.classList.contains('expanded') ? 'View Less' : 'View More';
+            });
+        }
+
+        const viewMoreExperienceBtn = document.querySelector('.experience .view-more-experience-btn');
+        if (viewMoreExperienceBtn) {
+            viewMoreExperienceBtn.addEventListener('click', () => {
+                const ul = viewMoreExperienceBtn.nextElementSibling;
+                ul.classList.toggle('expanded');
+                viewMoreExperienceBtn.textContent = ul.classList.contains('expanded') ? 'View Less' : 'View More';
+            });
+        }
+
+        const viewMoreArchitectureBtn = document.querySelector('.architecture .view-more-architecture-btn');
+        if (viewMoreArchitectureBtn) {
+            viewMoreArchitectureBtn.addEventListener('click', () => {
+                const ul = viewMoreArchitectureBtn.nextElementSibling;
+                ul.classList.toggle('expanded');
+                viewMoreArchitectureBtn.textContent = ul.classList.contains('expanded') ? 'View Less' : 'View More';
             });
         }
     </script>
