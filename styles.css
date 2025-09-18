@@ -125,21 +125,91 @@ main {
     padding: 40px 0;
 }
 
-#bio {
+#bio-roles {
     margin-bottom: 40px;
 }
 
-#bio h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
+.bio-roles-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 }
 
-#bio p {
+.bio, .roles {
+    flex: 1;
+}
+
+.bio h2, .roles h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.bio .view-more-bio-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.bio .view-more-bio-btn:hover {
+    background-color: #0056b3;
+}
+
+.bio-expanded {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.bio-expanded.expanded {
+    max-height: 300px; /* Adjust based on content */
+}
+
+.bio p, .roles p {
     margin-bottom: 15px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.header-btn {
+    margin-left: 20px;
+}
+
+.roles .view-more-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.roles .view-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.roles-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 20px;
+}
+
+.roles-list.expanded {
+    max-height: 500px; /* Adjust based on content */
+}
+
+.roles li {
+    margin-bottom: 10px;
 }
 
 #skills {
@@ -340,6 +410,9 @@ footer {
         margin-bottom: 20px;
     }
     .contact-education {
+        flex-direction: column;
+    }
+    .bio-roles-wrapper {
         flex-direction: column;
     }
 }
