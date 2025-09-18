@@ -88,6 +88,7 @@
                             and deploy CI/CD pipelines using GitHub Actions and Docker containers for automated testing,
                             builds,
                             and cloud-native deployment.</p>
+                        <button class="view-more-bio-btn">View More</button>
                         <div class="bio-expanded">
                             <p>Currently transitioning into AI-native engineering, leveraging tools like OpenAI,
                                 LangChain, and
@@ -110,6 +111,7 @@
                         <p>As a Full Stack Developer and AI Integration Engineer, I've contributed to the design,
                             development, and ongoing evolution of enterprise-grade applications across government,
                             financial, and internal systems. My responsibilities include:</p>
+                        <button class="view-more-btn">View More</button>
                         <ul class="roles-list">
                             <li>Full-Stack Development: Building and maintaining Angular frontends and .NET Core
                                 backends across multiple platforms, including HRMS, WPS systems, and public service
@@ -134,10 +136,6 @@
                                 BRDs, deliver high-impact features, and ensure seamless user experiences.</li>
                         </ul>
                     </div>
-                </div>
-                <div class="bio-roles-buttons">
-                    <button class="view-more-bio-btn">View More</button>
-                    <button class="view-more-btn">View More</button>
                 </div>
             </div>
         </section>
@@ -499,19 +497,19 @@
             });
         });
 
-        const viewMoreBtn = document.querySelector('.view-more-btn');
+        const viewMoreBtn = document.querySelector('.roles .view-more-btn');
         if (viewMoreBtn) {
             viewMoreBtn.addEventListener('click', () => {
-                const ul = document.querySelector('.roles-list');
+                const ul = viewMoreBtn.nextElementSibling;
                 ul.classList.toggle('expanded');
                 viewMoreBtn.textContent = ul.classList.contains('expanded') ? 'View Less' : 'View More';
             });
         }
 
-        const viewMoreBioBtn = document.querySelector('.view-more-bio-btn');
+        const viewMoreBioBtn = document.querySelector('.bio .view-more-bio-btn');
         if (viewMoreBioBtn) {
             viewMoreBioBtn.addEventListener('click', () => {
-                const div = document.querySelector('.bio-expanded');
+                const div = viewMoreBioBtn.nextElementSibling;
                 div.classList.toggle('expanded');
                 viewMoreBioBtn.textContent = div.classList.contains('expanded') ? 'View Less' : 'View More';
             });
