@@ -62,7 +62,8 @@
                         <p>📋 Certificate in Computer Science</p>
                         <p>🔌 CCNA</p>
                         <div class="header-buttons">
-                            <a href="cv.pdf" download class="btn header-btn">Download CV</a>
+                            <button onclick="generateCV()" class="btn header-btn">Download CV</button>
+                            <!-- <a href="cv.pdf" download class="btn header-btn">Download CV</a> -->
                             <!-- <div class="theme-toggle">
                                 <input type="checkbox" id="theme-switch">
                                 <label for="theme-switch">Toggle Theme</label>
@@ -511,6 +512,103 @@
         </div>
     </footer>
     <script>
+        function generateCV() {
+            const cvHTML = `
+                <html>
+                <head>
+                    <title>Edrine Mwesigwa - CV</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; background: white; color: black; }
+                        header { text-align: center; border-bottom: 2px solid #007bff; padding-bottom: 20px; margin-bottom: 20px; }
+                        h1 { margin: 0; color: #007bff; }
+                        h2 { margin: 5px 0; color: #333; }
+                        h3 { color: #007bff; border-bottom: 1px solid #007bff; padding-bottom: 5px; }
+                        section { margin-bottom: 20px; }
+                        ul { padding-left: 20px; }
+                        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+                        .project { margin-bottom: 15px; }
+                    </style>
+                </head>
+                <body>
+                    <header>
+                        <h1>Edrine Mwesigwa</h1>
+                        <h2>Full Stack Web Developer | AI Integration Engineer</h2>
+                        <p>Abu Dhabi, UAE | edrineviper@yahoo.com | +971-545759653</p>
+                        <p><a href="https://github.com/edrineviper">GitHub</a> | <a href="https://linkedin.com/in/edrine-mwesigwa">LinkedIn</a></p>
+                    </header>
+                    <section>
+                        <h3>Education</h3>
+                        <ul>
+                            <li>BSC Information Technology</li>
+                            <li>Diploma in Computer Science</li>
+                            <li>Certificate in Computer Science</li>
+                            <li>CCNA</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Work Experience</h3>
+                        <div>
+                            <h4>Software Engineer</h4>
+                            <p><em>Multi Level Technology, Abu Dhabi | March 2020 – Present</em></p>
+                            <ul>
+                                <li>Initially joined as an IT Support Specialist, stationed at RTA premises in Dubai, providing technical assistance for smart teller machines and public service kiosks.</li>
+                                <li>Transitioned into software development after three years, now working from the main office on full-stack enterprise systems and AI-powered applications.</li>
+                                <li>Contributed to government portals, financial platforms, and internal dashboards using Angular, .NET Core, SQL Server, and Clean Architecture.</li>
+                                <li>Led development and maintenance of key modules across HRMS, WPS systems, and access control platforms, integrating third-party services like UAE Pass, MOHRE, MoneyGram, and Passdock.</li>
+                                <li>Designed CI/CD pipelines using GitHub Actions and Docker, implemented secure authentication flows, and optimized backend APIs for performance and scalability.</li>
+                                <li>Actively maintain and evolve live systems, delivering new features, resolving bugs, and aligning technical solutions with business requirements.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Portfolio Architecture</h3>
+                        <p>This portfolio is more than a showcase — it's a reflection of my transition from manual coding to AI-assisted engineering. I now leverage prompt engineering and AI orchestration to scaffold full-stack systems with speed, precision, and architectural consistency.</p>
+                        <ul>
+                            <li><strong>Frontend:</strong> Built with HTML, CSS, and vanilla JavaScript for lightweight rendering. Angular and React are used in demo projects to showcase dynamic UI capabilities.</li>
+                            <li><strong>Backend:</strong> Projects span .NET Core APIs, Node.js microservices, and FastAPI endpoints — many scaffolded using AI tools based on BRDs or pseudocode inputs.</li>
+                            <li><strong>AI Integration:</strong> I use OpenAI and LangChain to interpret business logic, generate modular codebases, and automate repetitive development tasks.</li>
+                            <li><strong>CI/CD Pipeline:</strong> Configured GitHub Actions with YAML workflows for build, test, Docker image creation, and registry push. Secrets are managed securely via GitHub Secrets.</li>
+                            <li><strong>Containerization:</strong> Dockerized applications for consistent deployment across environments. Compose files manage multi-service orchestration.</li>
+                            <li><strong>Database:</strong> SQL Server and MongoDB are used across projects, with vector DBs (Pinecone, Weaviate) integrated for AI-powered search and matching.</li>
+                            <li><strong>Deployment Strategy:</strong> Projects are staged for deployment via Docker registries and cloud environments. Future iterations will include auto-deploy pipelines and serverless endpoints.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div><strong>Languages:</strong> C#, TypeScript, JavaScript, Python, SQL</div>
+                            <div><strong>Frontend:</strong> Angular, RxJS, NgRx, Bootstrap, Tailwind, React</div>
+                            <div><strong>Backend:</strong> .NET Core, ASP.NET MVC, FastAPI, REST APIs, EF Core, LINQ</div>
+                            <div><strong>AI Integration:</strong> OpenAI API, LangChain, Prompt Engineering, Semantic Kernel</div>
+                            <div><strong>DevOps & CI/CD:</strong> GitHub Actions, Docker, Kubernetes, IIS</div>
+                            <div><strong>Architecture:</strong> Clean Architecture, CQRS, JWT, DI, Microservices</div>
+                            <div><strong>Database:</strong> SQL Server, MongoDB, MySQL</div>
+                            <div><strong>Tools:</strong> Git, GitHub, Postman, Swagger, VS Code, Visual Studio, TFS</div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Highlighted Projects</h3>
+                        <div class="project"><strong>Autograph Salary/WPS System (Multi Level Technology):</strong> Enterprise-grade salary and WPS compliance platform built on a microservices architecture. Frontend: Designed and developed Angular 16 UI with multi-step registration, file uploads, dynamic modules. Backend: .NET Core APIs with Clean Architecture, CQRS, SQL Server. Integrations: UAE Pass, MOHRE. Tech: Angular 16, .NET Core, SQL Server, JWT, RabbitMQ, Ocelot, CQRS, Microservices.</div>
+                        <div class="project"><strong>Ajman E-Services Portal (Ajman Government):</strong> Public-facing digital services platform for government workflows. Applied Clean Architecture, Repository Pattern, Unit of Work. Migrated legacy systems to RESTful APIs. Tech: Angular, .NET Core, SQL Server.</div>
+                        <div class="project"><strong>RTA Services Portal (Dubai Government):</strong> High-traffic portal for fine inquiry, license renewal, vehicle registration. Developed Angular components, secure forms, real-time logic. Integrations: Abu Dhabi Police, MOI, UAE Pass, Oman Traffic, payment gateway. Tech: Angular, .NET Core, SQL Server, REST APIs.</div>
+                        <div class="project"><strong>Multi-Level HRMS (Multi Level Technology):</strong> HR management system tracking onboarding, attendance, leave, payroll, KPI. Razor views, vanilla JS, SQL queries. Tech: ASP.NET MVC, SQL Server, JavaScript.</div>
+                        <div class="project"><strong>Khalifah Fund QR Pass System (Abu Dhabi Government):</strong> Access management with QR-based passes. Migrated to .NET Core, integrated Passdock for QR generation. Tech: ASP.NET MVC, .NET Core, SQL Server.</div>
+                        <div class="project"><strong>Delma Exchange Financial System:</strong> Forex platform with remittance, deal management. Microservice backend, Angular frontend. Integrations: MoneyGram, Western Union. Tech: Angular, .NET Core, SQL Server.</div>
+                        <div class="project"><strong>Autograph Website (Demo):</strong> Full-stack demo for financial services. HTML/CSS/JS frontend, .NET Core API, MongoDB. AJAX contact form. Tech: HTML, CSS, JavaScript, .NET Core, MongoDB.</div>
+                        <div class="project"><strong>AI-Powered Resume Screener (Personal Project):</strong> App matching resumes to jobs using OpenAI embeddings. Angular UI, .NET 9 APIs, MongoDB. CI/CD with GitHub Actions. Tech: Angular 20, .NET 9, MongoDB, OpenAI.</div>
+                        <div class="project"><strong>Book ERP System (Multi Level Technology):</strong> Ticketing and asset management for call center. ASP.NET MVC, SQL Server. Tech: ASP.NET MVC, SQL Server.</div>
+                        <div class="project"><strong>Coffee Machine Dashboard (Multi Level Technology):</strong> Dashboard for ADCB coffee machines. Transaction logs, analytics. Tech: ASP.NET MVC, SQL Server, Chart.js.</div>
+                        <div class="project"><strong>AI-Powered App Scaffolder (Personal Project):</strong> Tool generating full-stack apps from BRDs/pseudocode. Uses AI for code scaffolding. Tech: OpenAI, .NET Core, Node.js, Angular, React.</div>
+                    </section>
+                </body>
+                </html>
+            `;
+            const cvWindow = window.open('', '_blank');
+            cvWindow.document.write(cvHTML);
+            cvWindow.document.close();
+            cvWindow.print();
+        }
+
         document.getElementById('theme-switch').addEventListener('change', function () {
             document.body.classList.toggle('theme-dark');
         });
